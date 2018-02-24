@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react'
 import { guessWord } from '../actions/word'
+import { connect } from 'react-redux'
 import './SubmitLetterButton.css'
 
 export class SubmitLetterButton extends PureComponent {
 
   handleClick = () => {
-    let guess = document.getElementById('total-count');
+    let guess = document.getElementById('PlayerInputField').value;
     this.props.guessWord(guess)
   };
 
@@ -21,4 +22,5 @@ export class SubmitLetterButton extends PureComponent {
   }
   }
 
-export default SubmitLetterButton
+
+  export default connect(null, { guessWord })(SubmitLetterButton)

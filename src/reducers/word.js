@@ -1,4 +1,7 @@
 // src/reducers/word.js
+//import { TYPE_LETTER } from '../actions/word'
+
+
 let generateWord = (function(){
   let generated = false
   return function(){
@@ -24,14 +27,17 @@ let guessesSoFar = []
 let wrongGuessCount = 0
 
 
-export default function(state = { wordToGuess, wordHidden, guessesSoFar, wrongGuessCount }, { type, payload } = {}) {
+//export default function(state = {wordToGuess, wordHidden, guessesSoFar, wrongGuessCount}, { type, payload } = {}) {
+export default function(state = {wordHidden, guessesSoFar}, { type, payload } = {}) {
 
-/*
-  switch(action.type) {
-    case 'NEW_GAME' :
-      return [].concat(action.payload)
-    default :
-    */
+if (type === 'TYPE_LETTER'){
+  return {
+    wordHidden: wordHidden,
+    guessesSoFar: guessesSoFar.concat(payload)
+  }
+  //guessesSoFar.concat(payload.guess)
+
+}
 
       return state
 

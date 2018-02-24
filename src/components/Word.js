@@ -6,9 +6,11 @@ class Word extends Component {
 
 
   render() {
+    //const word = this.props
     return (
       <div className="Word">
       {this.props.word.wordHidden}
+      {this.props.word.guessesSoFar}
       </div>
     );
   }
@@ -25,4 +27,4 @@ const mapStateToProps = (state) => {
 */
 // Then pass it to connect:
 const mapStateToProps = ({ word }) => ({ word })
-export default connect(mapStateToProps, {  })(Word)
+export default connect(mapStateToProps, {})(Word)
