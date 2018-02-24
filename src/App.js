@@ -12,9 +12,7 @@ function generateNewWord(){
     return wordList[randomIndex]
 }
 
-
 class App extends Component {
-
   render() {
     return (
       <div className="App">
