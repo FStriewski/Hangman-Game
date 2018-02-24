@@ -35,7 +35,7 @@ if (type === 'TYPE_LETTER'){
     wordHidden: wordHidden,
     guessesSoFar: guessesSoFar.concat(payload)
   }
-  //guessesSoFar.concat(payload.guess)
+
 
 }
 
