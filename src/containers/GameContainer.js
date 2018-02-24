@@ -9,7 +9,8 @@ class GameContainer extends Component {
   render() {
     return (
       <div className="GameContainer">
-      <Word />
+      <Word innerHTML={this.props.wordToGuess}/>
+
         <div className="flex-container">
             <PlayerInput />
             <Statbox />

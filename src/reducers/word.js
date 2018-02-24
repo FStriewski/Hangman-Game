@@ -18,11 +18,11 @@ let generateWord = (function(){
   }
 })();
 
-let wordToGuess = generateWord()
+let wordToGuess = "testestest" //generateWord()
 let wordHidden = wordToGuess.split("").map(x => x = "-").join("")
 
+export default function(state = { wordToGuess, wordHidden }, { type, payload } = {}) {
 
-export default function(state = {wordToGuess, wordHidden}, action = {}) {
 /*
   switch(action.type) {
     case 'NEW_GAME' :
