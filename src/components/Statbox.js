@@ -6,6 +6,7 @@ class Statbox extends Component {
     return (
       <div className="Statbox">
         <div>Player wrote: </div>
+        <br/><br/>
         <div>Wrong attempts: </div>
       </div>
     );

@@ -6,7 +6,7 @@ class PlayerInput extends Component {
     return (
       <div className="PlayerInput">
         <h3> Your guess: </h3>
-        <input type="text" className="PlayerInputField" placeholder=".?." />
+        <input type="text" className="PlayerInputField" placeholder="?" />
       </div>
     );
   }
