@@ -8,9 +8,10 @@ class GameContainer extends Component {
   render() {
     return (
       <div className="GameContainer">
-        <p>This is a wrapping container!</p>
-        <Statbox />
-        <PlayerInput />
+        <div className="flex-container">
+            <PlayerInput />
+            <Statbox />
+        </div>
       </div>
     );
   }
