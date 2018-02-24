@@ -22,19 +22,30 @@ let generateWord = (function(){
   }
 })();
 
-
+//const wordToGuess = generateWord();
+//const wordHidden = wordToGuess.split("").map(x => x = "-").join("")
 
 
 class Word extends Component {
 
- wordToGuess = generateWord()
+  checker(word){
+    const wordToGuess = generateWord();
+    let wordHidden = this.wordToGuess.split("").map(x => x = "-").join("")
 
+    let wordArray = wordToGuess.split("")
+    let puzzleWord = wordArray.map(x => word.indexOf(x) < 0 ? "_" : x).join("");
+  }
 
   render() {
-    //const word = this.props
+
+  const wordToGuess = generateWord();
+
+
+
+  console.log(wordToGuess)
     return (
       <div className="Word">
-      {this.wordToGuess}
+      {wordToGuess}
       {this.props.word.wordHidden}
       {this.props.word.guessesSoFar}
       </div>
