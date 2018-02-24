@@ -23,6 +23,7 @@ let wordHidden = wordToGuess.split("").map(x => x = "-").join("")
 let guessesSoFar = []
 let wrongGuessCount = 0
 
+
 export default function(state = { wordToGuess, wordHidden, guessesSoFar, wrongGuessCount }, { type, payload } = {}) {
 
 /*
