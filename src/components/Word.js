@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Word.css';
+import { connect } from 'react-redux'
 
 class Word extends Component {
   render() {
@@ -11,4 +12,5 @@ class Word extends Component {
   }
 }
 
-export default Word;
+
+export default connect()(Word)
