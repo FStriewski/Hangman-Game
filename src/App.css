@@ -6,10 +6,10 @@
 }
 
 h1{
-  text-transform: uppercase;
+    text-transform: uppercase;
 	letter-spacing: 8px;
 	padding: 0;
 	margin-left: 0;
 	margin-right: 0;
-  text-align: center;
+    text-align: center;
 }

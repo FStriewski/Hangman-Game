@@ -5,7 +5,8 @@ class PlayerInput extends Component {
   render() {
     return (
       <div className="PlayerInput">
-        <input type="text" className="PlayerInputField" placeholder="Your Guess.." />
+        <h3> Your guess: </h3>
+        <input type="text" className="PlayerInputField" placeholder=".?." />
       </div>
     );
   }
