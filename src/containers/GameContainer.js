@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import './gameContainer.css';
+import './GameContainer.css';
+import PlayerInput from '../components/PlayerInput';
+
 
 class GameContainer extends Component {
   render() {
     return (
       <div className="GameContainer">
-        This is a container
+        <p>This is a wrapping container</p>
+        <PlayerInput />
       </div>
     );
   }
