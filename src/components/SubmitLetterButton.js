@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { guessWord } from '../actions/word'
+import { replaceLetter } from '../actions/replace'
 import { connect } from 'react-redux'
 import {wordToGuess, wordHidden} from './wordRepos'
 import './SubmitLetterButton.css'
@@ -20,7 +21,9 @@ return puzzleWord.join("")
 
 
     if (wordToGuess.includes(guess)){
+
       this.props.guessWord(guess)
+      this.props.replaceLetter(guess)
     } else {
       // (I)add to wrong attempts
       document.getElementById('wrong_attempts').innerHTML += "I"
@@ -42,4 +45,4 @@ return puzzleWord.join("")
   }
 
 
-  export default connect(null, { guessWord })(SubmitLetterButton)
+  export default connect(null, { guessWord, replaceLetter  })(SubmitLetterButton)
