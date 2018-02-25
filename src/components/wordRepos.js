@@ -14,7 +14,7 @@ let generateWord = (function(){
 
       let randomIndex = Math.floor(Math.random()* wordList.length)
 
-      return wordList[randomIndex]
+      return wordList[randomIndex].toUpperCase()
     }
   }
 })();

@@ -8,17 +8,7 @@ import './SubmitLetterButton.css'
 export class SubmitLetterButton extends PureComponent {
 
   handleClick = () => {
-    let guess = document.getElementById('PlayerInputField').value;
-
-
-/*
-    let wordArray = wordToGuess.split("")
-let puzzleWord = wordArray.map(x => guesses.indexOf(x) < 0 ? "_" : x);
-console.log(puzzleWord.join(""))
-
-return puzzleWord.join("")
-*/
-
+    let guess = document.getElementById('PlayerInputField').value.toUpperCase();
 
     if (wordToGuess.includes(guess)){
 
