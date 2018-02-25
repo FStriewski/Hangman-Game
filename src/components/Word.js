@@ -4,14 +4,26 @@ import './Word.css';
 import { connect } from 'react-redux'
 //import {wordToGuess, wordHidden} from './wordRepos'
 
+//{shownToPlayer.map(x => x === action.payload ? action.payload : "-"  ).join("")}
 
 class Word extends Component {
 
+
   render() {
+
+    let wordHidden = this.props.replace.wordHidden
+    let wordToGuessArray = this.props.replace.wordToGuess.split("")
+    let allGuesses = this.props.replace.correctLetters
+
+    let display = wordToGuessArray.map(x => allGuesses.indexOf(x) < 0 ? "_" : x);
+
+
     return (
       <div className="Word">
-      {this.props.replace.wordToGuess}<br/>
-      {this.props.replace.wordHidden}
+      {wordToGuessArray}<br/>
+      {display}
+      <br/>
+
       </div>
     );
   }
