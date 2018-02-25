@@ -1,24 +1,23 @@
 import React, { PureComponent } from 'react'
-import { guessWord } from '../actions/word'
-import { replaceLetter } from '../actions/replace'
+import { logAttempt } from '../actions/logInput'
+import { replaceLetter } from '../actions/correctGuesses'
+import { countUp } from '../actions/countWrong'
 import { connect } from 'react-redux'
-import {wordToGuess, wordHidden} from './wordRepos'
+import {wordToGuess} from './wordRepos'
 import './SubmitLetterButton.css'
+
 
 export class SubmitLetterButton extends PureComponent {
 
   handleClick = () => {
     let guess = document.getElementById('PlayerInputField').value.toUpperCase();
+    this.props.logAttempt(guess)
 
     if (wordToGuess.includes(guess)){
-
-      this.props.guessWord(guess)
       this.props.replaceLetter(guess)
     } else {
-      // (I)add to wrong attempts
-      document.getElementById('wrong_attempts').innerHTML += "I"
+      this.props.countUp()
     }
-    // reset field
     document.getElementById('PlayerInputField').value = ""
   };
 
@@ -35,4 +34,4 @@ export class SubmitLetterButton extends PureComponent {
   }
 
 
-  export default connect(null, { guessWord, replaceLetter  })(SubmitLetterButton)
+  export default connect(null, { logAttempt, replaceLetter, countUp  })(SubmitLetterButton)

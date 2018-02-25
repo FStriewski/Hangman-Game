@@ -11,7 +11,7 @@ const initialState = {
 export default function(state = initialState, action = {}) {
 
 // Takes state as object, replaces guesses with the concatenated array
-  if (action.type === 'TYPE_LETTER'){
+  if (action.type === 'A_LETTER'){
     return {
       ...state, guessesSoFar: state.guessesSoFar.concat(action.payload)
     }

@@ -11,16 +11,16 @@ class Word extends Component {
 
   render() {
 
-    let wordHidden = this.props.replace.wordHidden
-    let wordToGuessArray = this.props.replace.wordToGuess.split("")
-    let allGuesses = this.props.replace.correctLetters
+    let wordHidden = this.props.correctGuesses.wordHidden
+    let wordToGuessArray = this.props.correctGuesses.wordToGuess.split("")
+    let allGuesses = this.props.correctGuesses.correctLetters
 
     let display = wordToGuessArray.map(x => allGuesses.indexOf(x) < 0 ? "_" : x);
 
-
+//{wordToGuessArray}
     return (
       <div className="Word">
-      {wordToGuessArray}<br/>
+      <br/>
       {display}
       <br/>
 
@@ -29,5 +29,5 @@ class Word extends Component {
   }
 }
 
-const mapStateToProps = ({ replace }) => ({ replace })
+const mapStateToProps = ({ correctGuesses }) => ({ correctGuesses })
 export default connect(mapStateToProps, {})(Word)

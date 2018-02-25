@@ -1,7 +1,9 @@
-import word from './word'
-import replace from './replace'
+import logInput from './logInput'
+import correctGuesses from './correctGuesses'
+import countWrong from './countWrong'
 
 export default {
-  word,
-  replace,
+  logInput,
+  correctGuesses,
+  countWrong,
 }
