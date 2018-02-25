@@ -1,21 +1,35 @@
 // src/reducers/word.js
 //import { TYPE_LETTER } from '../actions/word'
 
-let guessesSoFar = []
-//let wrongGuessCount = 0
 
+//let wrongGuessCount = 0
+const initialState = {
+  guessesSoFar: []
+};
 
 //export default function(state = {wordToGuess, wordHidden, guessesSoFar, wrongGuessCount}, { type, payload } = {}) {
-export default function(state = {guessesSoFar}, { type, payload } = {}) {
+export default function(state = initialState, action = {}) {
 
-if (type === 'TYPE_LETTER'){
-  return {
-    guessesSoFar: guessesSoFar.concat(payload)
+// Takes state as object, replaces guesses with the concatenated array
+  if (action.type === 'TYPE_LETTER'){
+    return {
+      ...state, guessesSoFar: state.guessesSoFar.concat(action.payload)
+    }
   }
 
-
+  return state
 }
 
-      return state
 
+//
+/*
+let state = {a: "222", guessesSoFar : []}
+
+function test (x){
+  return {
+    ...x, guessesSoFar: 2
+  }
 }
+
+test(state)
+*/

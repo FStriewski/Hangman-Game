@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import './Word.css';
 import { connect } from 'react-redux'
@@ -29,11 +30,11 @@ let generateWord = (function(){
 class Word extends Component {
 
   checker(word){
-    const wordToGuess = generateWord();
-    let wordHidden = this.wordToGuess.split("").map(x => x = "-").join("")
-
+    let wordToGuess = "test"//generateWord();
+    let wordHidden = wordToGuess.split("").map(x => x = "-").join("")
     let wordArray = wordToGuess.split("")
     let puzzleWord = wordArray.map(x => word.indexOf(x) < 0 ? "_" : x).join("");
+    console.log(wordHidden, wordArray, puzzleWord )
   }
 
   render() {
@@ -45,6 +46,7 @@ class Word extends Component {
   console.log(wordToGuess)
     return (
       <div className="Word">
+      {this.checker("a")}
       {wordToGuess}
       {this.props.word.wordHidden}
       {this.props.word.guessesSoFar}
