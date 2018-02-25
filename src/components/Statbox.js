@@ -9,7 +9,7 @@ class Statbox extends Component {
         <div>Player wrote: </div>
         <span>{this.props.word.guessesSoFar}</span>
         <br/><br/>
-        <div>Wrong attempts: </div>
+        <div>Wrong attempts: <div id="wrong_attempts"></div></div>
       </div>
     );
   }

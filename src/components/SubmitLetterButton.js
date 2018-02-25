@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { guessWord } from '../actions/word'
 import { connect } from 'react-redux'
+import {wordToGuess, wordHidden} from './wordRepos'
 import './SubmitLetterButton.css'
 
 export class SubmitLetterButton extends PureComponent {
@@ -8,14 +9,22 @@ export class SubmitLetterButton extends PureComponent {
   handleClick = () => {
     let guess = document.getElementById('PlayerInputField').value;
 
-    if (guess){
+
+/*
+    let wordArray = wordToGuess.split("")
+let puzzleWord = wordArray.map(x => guesses.indexOf(x) < 0 ? "_" : x);
+console.log(puzzleWord.join(""))
+
+return puzzleWord.join("")
+*/
+
+
+    if (wordToGuess.includes(guess)){
       this.props.guessWord(guess)
     } else {
-      
+      // (I)add to wrong attempts
+      document.getElementById('wrong_attempts').innerHTML += "I"
     }
-
-
-
     // reset field
     document.getElementById('PlayerInputField').value = ""
   };
