@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './GameContainer.css';
 import Word from '../components/Word';
-import PlayerInput from '../components/PlayerInput';
 import Statbox from '../components/Statbox';
-import SubmitLetterButton from '../components/SubmitLetterButton';
+import SubmitGuess from '../components/SubmitGuess';
 
 
 class GameContainer extends Component {
@@ -13,10 +12,10 @@ class GameContainer extends Component {
       <Word innerHTML={this.props.wordToGuess}/>
 
         <div className="flex-container">
-            <PlayerInput />
             <Statbox />
+            <SubmitGuess />
         </div>
-        <SubmitLetterButton />
+
       </div>
     );
   }

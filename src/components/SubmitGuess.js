@@ -4,13 +4,13 @@ import { replaceLetter } from '../actions/correctGuesses'
 import { countUp } from '../actions/countWrong'
 import { connect } from 'react-redux'
 import {wordToGuess} from './wordRepos'
-import './SubmitLetterButton.css'
+import './SubmitGuess.css'
 
 
-export class SubmitLetterButton extends PureComponent {
+export class SubmitGuess extends PureComponent {
 
   handleClick = () => {
-    let guess = document.getElementById('PlayerInputField').value.toUpperCase();
+    let guess = document.getElementById('PlayerInputField').value.toUpperCase().slice(0, 1);
     this.props.logAttempt(guess)
 
     if (wordToGuess.includes(guess)){
@@ -23,15 +23,13 @@ export class SubmitLetterButton extends PureComponent {
 
   render() {
     return (
-      <button
-        onClick={this.handleClick}
-        className="SubmitLetterButton"
-      >
-        Submit Letter
-      </button>
+      <div className="PlayerInput">
+        <input type="text" className="Input" id="PlayerInputField" placeholder="?" />
+        <button onClick={this.handleClick} className="SubmitLetterButton">Make a guess</button>
+      </div>
     )
   }
   }
 
 
-  export default connect(null, { logAttempt, replaceLetter, countUp  })(SubmitLetterButton)
+  export default connect(null, { logAttempt, replaceLetter, countUp  })(SubmitGuess)
