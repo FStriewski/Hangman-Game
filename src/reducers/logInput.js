@@ -13,7 +13,7 @@ export default function(state = initialState, action = {}) {
   return state
 }
 
-/*
+/* Syntax reminder
 let state = {a: "222", guessesSoFar : []}
 
 function test (x){

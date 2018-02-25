@@ -6,6 +6,5 @@ export default function(state = {counter: 0}, action = {}) {
       ...state, counter: state.counter += 1
     }
   }
-
   return state
 }
