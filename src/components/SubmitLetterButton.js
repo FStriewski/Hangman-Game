@@ -8,6 +8,7 @@ export class SubmitLetterButton extends PureComponent {
   handleClick = () => {
     let guess = document.getElementById('PlayerInputField').value;
     this.props.guessWord(guess)
+    document.getElementById('PlayerInputField').value = ""
   };
 
   render() {

@@ -7,6 +7,7 @@ class Statbox extends Component {
     return (
       <div className="Statbox">
         <div>Player wrote: </div>
+        <span>{this.props.word.guessesSoFar}</span>
         <br/><br/>
         <div>Wrong attempts: </div>
       </div>
@@ -14,4 +15,6 @@ class Statbox extends Component {
   }
 }
 
-export default Statbox;
+//export default Statbox;
+const mapStateToProps = ({ word }) => ({ word })
+export default connect(mapStateToProps, {})(Statbox)

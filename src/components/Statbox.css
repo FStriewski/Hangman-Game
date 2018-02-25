@@ -6,3 +6,8 @@
   width: 200px;
   float: right;
 }
+
+span {
+  color: red;
+  letter-spacing: 4px;
+}
