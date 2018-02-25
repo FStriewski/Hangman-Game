@@ -10,13 +10,10 @@ class GameContainer extends Component {
     return (
       <div className="GameContainer">
       <Word />
-
         <div id="flexBox">
-
-
-            <SubmitGuess />
-<Statbox />
-  </div>
+          <SubmitGuess />
+          <Statbox />
+        </div>
       </div>
     );
   }

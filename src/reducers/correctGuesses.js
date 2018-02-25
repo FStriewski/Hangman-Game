@@ -1,12 +1,10 @@
 import {wordToGuess, wordHidden} from '../components/wordRepos'
 
-
 const initialState = {
   wordToGuess,
   wordHidden,
   correctLetters : []
 };
-
 
 export default function(state = initialState, action = {}) {
 

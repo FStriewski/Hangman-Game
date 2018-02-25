@@ -1,5 +1,4 @@
 
-
 let generateWord = (function(){
   let generated = false
   return function(){
@@ -21,7 +20,3 @@ let generateWord = (function(){
 
 export let wordToGuess = generateWord();
 export let wordHidden = wordToGuess.split("").map(x => x = "-").join("")
-
-
-//let wordArray = wordToGuess.split("")
-//let puzzleWord = wordArray.map(x => word.indexOf(x) < 0 ? "_" : x).join("");

@@ -8,12 +8,10 @@ class Statbox extends Component {
       <div className="Statbox">
         <div>Log: <span>{this.props.logInput.guessesSoFar}</span></div><br/>
         <div>Wrong: <span>{this.props.countWrong.counter}</span></div>
-
       </div>
     );
   }
 }
 
-//export default Statbox;
 const mapStateToProps = ({ logInput, countWrong }) => ({ logInput, countWrong })
 export default connect(mapStateToProps, {})(Statbox)

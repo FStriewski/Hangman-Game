@@ -28,7 +28,6 @@ export class SubmitGuess extends PureComponent {
       </div>
     )
   }
-  }
-
+}
 
   export default connect(null, { logAttempt, replaceLetter, countUp  })(SubmitGuess)
