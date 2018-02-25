@@ -9,13 +9,14 @@ class GameContainer extends Component {
   render() {
     return (
       <div className="GameContainer">
-      <Word innerHTML={this.props.wordToGuess}/>
+      <Word />
 
-        <div className="flex-container">
-            <Statbox />
+        <div id="flexBox">
+
+
             <SubmitGuess />
-        </div>
-
+<Statbox />
+  </div>
       </div>
     );
   }

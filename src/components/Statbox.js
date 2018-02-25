@@ -6,11 +6,9 @@ class Statbox extends Component {
   render() {
     return (
       <div className="Statbox">
-        <div>Player wrote: </div>
-        <span>{this.props.logInput.guessesSoFar}</span>
-        <br/><br/>
-        <div>Wrong attempts: <div id="wrong_attempts"></div>
-        <span>{this.props.countWrong.counter}</span></div>
+        <div>Log: <span>{this.props.logInput.guessesSoFar}</span></div><br/>
+        <div>Wrong: <span>{this.props.countWrong.counter}</span></div>
+
       </div>
     );
   }
